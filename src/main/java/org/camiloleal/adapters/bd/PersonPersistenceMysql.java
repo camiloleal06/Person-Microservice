@@ -18,4 +18,9 @@ public class PersonPersistenceMysql implements PersonPersistence {
                 .stream()
                 .map( PersonEntity::toPerson).collect(Collectors.toList());
     }
+
+    @Override
+    public Person create(Person person) {
+        return  personRepository.save(new PersonEntity(person)).toPerson();
+    }
 }

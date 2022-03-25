@@ -38,4 +38,8 @@ public class PersonEntity {
        return person;
           }
 
+    public PersonEntity(Person person) {
+        BeanUtils.copyProperties(person, this);
+    }
+
 }

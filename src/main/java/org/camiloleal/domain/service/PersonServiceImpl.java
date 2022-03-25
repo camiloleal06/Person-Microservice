@@ -17,4 +17,9 @@ public class PersonServiceImpl implements PersonInterface {
     public List<Person> findAll() {
         return personPersistence.findAll();
     }
+
+    @Override
+    public Person create(Person person) {
+        return personPersistence.create(person);
+    }
 }

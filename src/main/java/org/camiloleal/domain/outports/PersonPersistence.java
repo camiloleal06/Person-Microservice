@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface PersonPersistence {
     List<Person> findAll();
+    Person create(Person person);
 }
