@@ -24,7 +24,7 @@ public class PersonServiceImpl implements PersonInterface {
     }
 
     @Override
-    public Person getPersonById(Integer id) {
+    public Person getPersonById(Integer id)  {
         return personPersistence.getPersonById(id);
     }
 }

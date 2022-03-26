@@ -16,8 +16,9 @@ public class PersonController {
 
     @GetMapping
     public List<Person> findAllPeople() {
-            return this.personService.findAll();
+        return this.personService.findAll();
     }
+
     @PostMapping
     public Person createPerson(@RequestBody Person person) {
         return this.personService.create(person);
