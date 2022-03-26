@@ -1,8 +1,6 @@
 package org.camiloleal.adapters.bd;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.camiloleal.domain.model.Person;
 import org.springframework.beans.BeanUtils;
@@ -11,8 +9,6 @@ import javax.persistence.*;
 
 @Setter
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class PersonEntity {
     @Id
@@ -31,6 +27,16 @@ public class PersonEntity {
     private int old;
     @Column(length = 50)
     private String city;
+
+    public PersonEntity(String dni, String firstName, String lastName, String email, String phone, int old, String city) {
+        this.dni = dni;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.old = old;
+        this.city = city;
+    }
 
     public Person toPerson() {
         Person person = new Person();
