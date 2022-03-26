@@ -6,9 +6,9 @@ import org.camiloleal.domain.service.PersonServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class PersonControllerTest {
@@ -17,21 +17,36 @@ class PersonControllerTest {
 
     private final PersonController personController = new PersonController(personService);
 
-    PersonEntity person = PersonEntity.builder().build();
-    Person personDomain = person.toPerson();
+    final int ID = 1;
 
+    PersonEntity person = PersonEntity.builder().build();
+
+    Person personDomain = person.toPerson();
+    Person personDomain2 = person.toPerson();
+
+    List<Person> listPerson = Arrays.asList(personDomain, personDomain2);
 
     @Test
-    void shouldCallServiceCreatePerson() {
+    void shouldCallServiceCreate() {
         when(personService.create(personDomain)).thenReturn(personDomain);
         personController.createPerson(personDomain);
         verify(personService, times(1)).create(personDomain);
     }
 
     @Test
-    void shouldCallServiceFindAllPeople() {
-        when(personService.findAll()).thenReturn(Arrays.asList(personDomain));
+    void shouldCallServiceFindAll() {
+        when(personService.findAll()).thenReturn(listPerson);
         assertFalse(personController.findAllPeople().isEmpty());
-        verify(personService, times(1)).findAll();
+        assertEquals(2, personController.findAllPeople().size());
+        verify(personService, times(2)).findAll();
     }
+
+    @Test
+    void shouldCallServiceGetPersonById() {
+        when(personService.getPersonById(ID)).thenReturn(personDomain);
+        assertNotNull(personController.findPersonById(ID));
+        verify(personService, times(1)).getPersonById(ID);
+    }
+
+
 }
