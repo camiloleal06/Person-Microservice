@@ -9,4 +9,5 @@ import java.util.List;
 public interface PersonPersistence {
     List<Person> findAll();
     Person create(Person person);
+    Person getPersonById(Integer id);
 }

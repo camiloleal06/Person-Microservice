@@ -22,4 +22,9 @@ public class PersonServiceImpl implements PersonInterface {
     public Person create(Person person) {
         return personPersistence.create(person);
     }
+
+    @Override
+    public Person getPersonById(Integer id) {
+        return personPersistence.getPersonById(id);
+    }
 }

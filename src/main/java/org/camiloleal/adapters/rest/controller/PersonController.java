@@ -22,4 +22,9 @@ public class PersonController {
     public Person createPerson(@RequestBody Person person) {
         return this.personService.create(person);
     }
+
+    @GetMapping("/{id}")
+    public Person findPersonById(@PathVariable Integer id) {
+        return this.personService.getPersonById(id);
+    }
 }

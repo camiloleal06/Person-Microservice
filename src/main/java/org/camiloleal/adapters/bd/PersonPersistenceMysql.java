@@ -23,4 +23,9 @@ public class PersonPersistenceMysql implements PersonPersistence {
     public Person create(Person person) {
         return  personRepository.save(new PersonEntity(person)).toPerson();
     }
+
+    @Override
+    public Person getPersonById(Integer id) {
+        return personRepository.findById(id).orElseThrow(RuntimeException::new).toPerson();
+    }
 }
