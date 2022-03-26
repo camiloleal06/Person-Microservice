@@ -12,16 +12,17 @@ import java.util.stream.Collectors;
 @Repository("personPersistence")
 public class PersonPersistenceMysql implements PersonPersistence {
     private PersonRepository personRepository;
+
     @Override
     public List<Person> findAll() {
         return personRepository.findAll()
                 .stream()
-                .map( PersonEntity::toPerson).collect(Collectors.toList());
+                .map(PersonEntity::toPerson).collect(Collectors.toList());
     }
 
     @Override
     public Person create(Person person) {
-        return  personRepository.save(new PersonEntity(person)).toPerson();
+        return personRepository.save(new PersonEntity(person)).toPerson();
     }
 
     @Override
