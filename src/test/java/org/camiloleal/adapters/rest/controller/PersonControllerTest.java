@@ -17,8 +17,7 @@ class PersonControllerTest {
 
     private final PersonController personController = new PersonController(personService);
 
-    PersonEntity person = new PersonEntity("73207639", "Camilo Jesús", "Leal Patiño", "camiloleal@gmail.com", "3225996394", 37, "Cartagena");
-
+    PersonEntity person = PersonEntity.builder().build();
     Person personDomain = person.toPerson();
 
 
@@ -26,8 +25,7 @@ class PersonControllerTest {
     void shouldCallServiceCreatePerson() {
         when(personService.create(personDomain)).thenReturn(personDomain);
         personController.createPerson(personDomain);
-        assertEquals("Cartagena", personService.create(personDomain).getCity());
-        verify(personService, times(2)).create(personDomain);
+        verify(personService, times(1)).create(personDomain);
     }
 
     @Test
