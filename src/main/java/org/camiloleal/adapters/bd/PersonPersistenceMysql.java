@@ -1,6 +1,7 @@
 package org.camiloleal.adapters.bd;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.camiloleal.domain.model.Person;
 import org.camiloleal.domain.outports.PersonPersistence;
 import org.springframework.stereotype.Repository;
@@ -9,8 +10,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Repository("personPersistence")
 public class PersonPersistenceMysql implements PersonPersistence {
+
     private PersonRepository personRepository;
 
     @Override
