@@ -2,7 +2,7 @@ package org.camiloleal.adapters.rest.controller;
 
 import lombok.AllArgsConstructor;
 
-import org.camiloleal.domain.inports.PersonInterface;
+import org.camiloleal.ports.in_ports.PersonInterface;
 import org.camiloleal.domain.model.Person;
 import org.springframework.web.bind.annotation.*;
 

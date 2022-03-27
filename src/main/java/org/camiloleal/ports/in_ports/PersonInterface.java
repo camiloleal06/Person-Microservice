@@ -1,4 +1,4 @@
-package org.camiloleal.domain.inports;
+package org.camiloleal.ports.in_ports;
 
 import org.camiloleal.domain.model.Person;
 

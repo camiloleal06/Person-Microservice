@@ -3,7 +3,7 @@ package org.camiloleal.adapters.bd;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.domain.outports.PersonPersistence;
+import org.camiloleal.ports.out_ports.PersonPersistence;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

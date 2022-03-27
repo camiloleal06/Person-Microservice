@@ -47,7 +47,10 @@ class PersonServiceImplTest {
         when(personService.getPersonById(ID)).thenReturn(personDomain);
         assertNotEquals(null, personService.getPersonById(ID));
         assertEquals("73207639", personService.getPersonById(ID).getDni());
-        verify(personService, times(2)).getPersonById(ID);
+        assertEquals("Cartagena", personService.getPersonById(ID).getCity());
+        assertEquals("camilo", personService.getPersonById(ID).getFirstName());
+        assertEquals("Leal", personService.getPersonById(ID).getLastName());
+        verify(personService, times(5)).getPersonById(ID);
     }
 
 }
