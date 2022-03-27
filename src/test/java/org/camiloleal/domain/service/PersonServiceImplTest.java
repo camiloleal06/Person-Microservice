@@ -26,7 +26,6 @@ class PersonServiceImplTest {
             .old(35)
             .phone("73207639")
             .build();
-
     List<Person> listPerson = List.of(personDomain);
 
     @Test
