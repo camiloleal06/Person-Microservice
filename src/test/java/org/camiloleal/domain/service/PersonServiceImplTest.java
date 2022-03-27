@@ -9,7 +9,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.times;
 
 class PersonServiceImplTest {
 
@@ -19,9 +18,27 @@ class PersonServiceImplTest {
 
     PersonEntity person = PersonEntity.builder().build();
 
-    Person personDomain = person.toPerson();
+    Person personDomain = Person.builder().
+            id(1)
+            .dni("73207639")
+            .city("Cartagena")
+            .email("camiloleal@gmail.com")
+            .firstName("camilo")
+            .lastName("Leal")
+            .old(35)
+            .phone("73207639")
+            .build();
 
-    Person personDomain2 = person.toPerson();
+    Person personDomain2 = Person.builder().
+            id(1)
+            .dni("73207638")
+            .city("Cartagena")
+            .email("camiloleal3@gmail.com")
+            .firstName("camilo")
+            .lastName("Leal")
+            .old(30)
+            .phone("73207637")
+            .build();
 
     List<Person> listPerson = Arrays.asList(personDomain, personDomain2);
 
@@ -36,13 +53,15 @@ class PersonServiceImplTest {
     void shouldCallServiceFindAll() {
         when(personService.findAll()).thenReturn(listPerson);
         assertFalse(personService.findAll().isEmpty());
-        verify(personService, times(1)).findAll();
+        assertEquals(2, personService.findAll().size());
+        verify(personService, times(2)).findAll();
     }
 
     @Test
     void shouldCallServiceGetPersonById() {
         when(personService.getPersonById(ID)).thenReturn(personDomain);
         assertNotEquals(null, personService.getPersonById(ID));
-        verify(personService, times(1)).getPersonById(ID);
+        assertEquals("73207639",personService.getPersonById(ID).getDni());
+        verify(personService, times(2)).getPersonById(ID);
     }
 }
