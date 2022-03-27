@@ -14,6 +14,8 @@ class PersonServiceImplTest {
 
     final int ID = 1;
 
+    final String EMAIL = "camiloleal@gmail.com";
+
     Person personDomain = Person.builder().
             id(1)
             .dni("73207639")
@@ -49,6 +51,14 @@ class PersonServiceImplTest {
         assertEquals("73207639", personService.getPersonById(ID).getDni());
         assertEquals("Cartagena", personService.getPersonById(ID).getCity());
         verify(personService, times(3)).getPersonById(ID);
+    }
+
+    @Test
+    void shouldCallServiceGetPersonByEmail() {
+        when(personService.getPersonByEmail(EMAIL)).thenReturn(personDomain);
+        assertNotEquals(null, personService.getPersonByEmail(EMAIL));
+        assertEquals("73207639", personService.getPersonByEmail(EMAIL).getDni());
+              verify(personService, times(2)).getPersonByEmail(EMAIL);
     }
 
 }

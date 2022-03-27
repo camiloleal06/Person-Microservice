@@ -29,4 +29,10 @@ public class PersonController {
     public Person findPersonById(@PathVariable Integer id) {
         return this.personService.getPersonById(id);
     }
+
+    @GetMapping("/email/{email}")
+    public Person findPersonById(@PathVariable String email) {
+        return this.personService.getPersonByEmail(email);
+    }
 }
+

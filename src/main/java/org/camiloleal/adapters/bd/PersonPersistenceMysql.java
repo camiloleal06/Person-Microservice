@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Repository("personPersistence")
+
 public class PersonPersistenceMysql implements PersonPersistence {
 
     private PersonRepository personRepository;
@@ -31,5 +32,10 @@ public class PersonPersistenceMysql implements PersonPersistence {
     @Override
     public Person getPersonById(Integer id) {
         return personRepository.findById(id).orElseThrow(RuntimeException::new).toPerson();
+    }
+
+    @Override
+    public Person getPersonByEmail(String email) {
+        return personRepository.findByEmail(email);
     }
 }

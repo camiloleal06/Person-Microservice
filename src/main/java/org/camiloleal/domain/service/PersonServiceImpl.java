@@ -7,6 +7,7 @@ import org.camiloleal.domain.outports.PersonPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class PersonServiceImpl implements PersonInterface {
@@ -18,14 +19,18 @@ public class PersonServiceImpl implements PersonInterface {
         return personPersistence.findAll();
     }
 
-
     @Override
     public Person create(Person person) {
         return personPersistence.create(person);
     }
 
     @Override
-    public Person getPersonById(Integer id)  {
+    public Person getPersonById(Integer id) {
         return personPersistence.getPersonById(id);
+    }
+
+    @Override
+    public Person getPersonByEmail(String email) {
+        return personPersistence.getPersonByEmail(email);
     }
 }
