@@ -16,3 +16,12 @@ Estado del código
 
 
 Proyecto Microservicios y Arquitectura Limpia 
+
+⚙️ Instalación del proyecto
+Clonar el repositorio en tu equipo:
+<code>git clone https://github.com/camiloleal06/Person-Microservice</code>
+
+🚀Puerto Primario o Entrada. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonInterface</code>
+
+🚀Puerto Secundario o Salida. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonRepository</code>
+
