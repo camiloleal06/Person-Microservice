@@ -15,15 +15,15 @@ public class PersonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(length = 50, nullable = false, unique = true)
+    @Column(length = 50, nullable = false)
     private String dni;
     @Column(length = 50)
     private String firstName;
     @Column(length = 50)
     private String lastName;
-    @Column(length = 50, unique = true)
+    @Column(length = 50)
     private String email;
-    @Column(length = 12, unique = true)
+    @Column(length = 12)
     private String phone;
     private int old;
     @Column(length = 50)
