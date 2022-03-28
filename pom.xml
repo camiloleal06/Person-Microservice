@@ -14,9 +14,7 @@
     <name>Person-Microservice</name>
     <description>Person Microservice Clean Architecture</description>
     <properties>
-  <sonar.organization>camiloleal06-1</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <java.version>11</java.version>
+       <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
