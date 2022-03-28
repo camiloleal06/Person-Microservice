@@ -23,7 +23,7 @@ class PersonServiceImplTest {
             .email("camiloleal@gmail.com")
             .firstName("camilo")
             .lastName("Leal")
-            .old(35)
+            .age(35)
             .phone("73207639")
             .build();
     List<Person> listPerson = List.of(personDomain);

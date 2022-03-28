@@ -14,6 +14,6 @@ public class Person {
     private String lastName;
     private String email;
     private String phone;
-    private int old;
+    private int age;
     private String city;
 }
