@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
-@Repository("personPersistence")
+@Repository("personRepository")
 
 public class PersonRepositoryMysql implements PersonRepository {
 
