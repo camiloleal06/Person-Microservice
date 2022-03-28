@@ -9,7 +9,7 @@ Estado del código
    </center>
  
 <h3 dir="auto">Tecnologías necesarias</h3>
-<p dir="auto"><code>Java</code> <code>Spring-boot</code> <code>MySQL</code> <code>MongoDB</code> <code>MySQL</code> <code>Maven</code> <code>GitHub</code> <code>SonarLint</code> <code>Better Code Hub</code> <code>Swagger</code></p>
+<p dir="auto"><code>Java</code> <code>Spring-boot</code> <code>MySQL</code> <code>MongoDB</code> <code>MySQL</code> <code>Maven</code> <code>GitHub</code> <code>SonarLint</code> <code>Better Code Hub</code> <code>Swagger</code><code>SonarQube</code></p>
 
 
 Proyecto Microservicios y Arquitectura Limpia 
