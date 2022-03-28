@@ -1,12 +1,10 @@
-package org.camiloleal.ports;
+package org.camiloleal.ports.in_port;
 
 import org.camiloleal.domain.model.Person;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface PersonRepository {
+public interface PersonInterface {
     List<Person> findAll();
     Person create(Person person);
     Person getPersonById(Integer id);

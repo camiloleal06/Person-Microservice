@@ -10,7 +10,6 @@ import org.springframework.test.context.TestPropertySource;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@TestPropertySource(locations = "classpath:test.properties")
 class PersonPersistenceMysqlTest {
 
     @Autowired

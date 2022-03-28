@@ -2,7 +2,7 @@ package org.camiloleal.adapters.rest.controller;
 
 import lombok.AllArgsConstructor;
 
-import org.camiloleal.ports.PersonInterface;
+import org.camiloleal.ports.in_port.PersonInterface;
 import org.camiloleal.domain.model.Person;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,26 +13,26 @@ import java.util.List;
 @AllArgsConstructor
 public class PersonController {
 
-    private PersonInterface personService;
+    private PersonInterface personInterface;
 
     @GetMapping
     public List<Person> findAllPeople() {
-        return this.personService.findAll();
+        return this.personInterface.findAll();
     }
 
     @PostMapping
     public Person createPerson(@RequestBody Person person) {
-        return this.personService.create(person);
+        return this.personInterface.create(person);
     }
 
     @GetMapping("/{id}")
     public Person findPersonById(@PathVariable Integer id) {
-        return this.personService.getPersonById(id);
+        return this.personInterface.getPersonById(id);
     }
 
     @GetMapping("/email/{email}")
     public Person findPersonById(@PathVariable String email) {
-        return this.personService.getPersonByEmail(email);
+        return this.personInterface.getPersonByEmail(email);
     }
 }
 

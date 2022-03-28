@@ -1,9 +1,9 @@
 package org.camiloleal.domain.service;
 
 import lombok.AllArgsConstructor;
-import org.camiloleal.ports.PersonInterface;
+import org.camiloleal.ports.in_port.PersonInterface;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.ports.PersonRepository;
+import org.camiloleal.ports.out_port.PersonPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,25 +13,25 @@ import java.util.List;
 @AllArgsConstructor
 public class PersonServiceImpl implements PersonInterface {
 
-    private PersonRepository personRepository;
+    private PersonPersistence personPersistence;
 
     @Override
     public List<Person> findAll() {
-        return personRepository.findAll();
+        return personPersistence.findAll();
     }
 
     @Override
     public Person create(Person person) {
-        return personRepository.create(person);
+        return personPersistence.create(person);
     }
 
     @Override
     public Person getPersonById(Integer id) {
-        return personRepository.getPersonById(id);
+        return personPersistence.getPersonById(id);
     }
 
     @Override
     public Person getPersonByEmail(String email) {
-        return personRepository.getPersonByEmail(email);
+        return personPersistence.getPersonByEmail(email);
     }
 }
