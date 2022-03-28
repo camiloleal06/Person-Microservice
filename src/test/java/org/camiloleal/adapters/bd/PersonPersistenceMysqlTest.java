@@ -20,14 +20,13 @@ class PersonPersistenceMysqlTest {
 
     @BeforeEach
     void setUp() {
-
-        person.setDni("73207634");
+        person.setDni("73207333");
         person.setCity("Cartagena");
-        person.setEmail("camiloleal22@gmail.com");
+        person.setEmail("camiloleal2022@gmail.com");
         person.setFirstName("camilo");
         person.setLastName("Leal");
         person.setOld(35);
-        person.setPhone("73207642");
+        person.setPhone("73207343");
 
     }
 
@@ -36,13 +35,6 @@ class PersonPersistenceMysqlTest {
         personRepository.findAll();
         assertFalse(personRepository.findAll().isEmpty());
     }
-
-    @Test
-    @Rollback
-    void create() {
-        assertNotNull(personRepository.save(person));
-    }
-
     @Test
     void getPersonById() {
         assertNotNull(personRepository.getById(1));
@@ -53,4 +45,11 @@ class PersonPersistenceMysqlTest {
         assertNotNull(personRepository.findByEmail("camiloleal06@gmail.com"));
         assertEquals("Cartagena", personRepository.findByEmail("camiloleal06@gmail.com").getCity());
     }
+    @Test
+    @Rollback
+    void create() {
+        assertNotNull(personRepository.save(person));
+    }
+
+
 }
