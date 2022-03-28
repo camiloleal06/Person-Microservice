@@ -15,7 +15,7 @@ Estado del código
 <p dir="auto"><code>Java</code> <code>Spring-boot</code> <code>MySQL</code> <code>MongoDB</code> <code>MySQL</code> <code>Maven</code> <code>GitHub</code> <code>SonarLint</code> <code>Better Code Hub</code> <code>Swagger</code>  <code>SonarQube</code></p>
 
 
-Proyecto Microservicios y Arquitectura Limpia 
+<h3 dir="auto">Proyecto Microservicios y Arquitectura Limpia </h3>
 
 ⚙️ Instalación del proyecto
 Clonar el repositorio en tu equipo:
