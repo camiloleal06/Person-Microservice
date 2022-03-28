@@ -2,7 +2,7 @@ package org.camiloleal.adapters.bd;
 
 import lombok.AllArgsConstructor;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.domain.outports.PersonPersistence;
+import org.camiloleal.ports.PersonRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,9 +11,9 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Repository("personPersistence")
 
-public class PersonPersistenceMysql implements PersonPersistence {
+public class PersonRepositoryMysql implements PersonRepository {
 
-    private PersonRepository personRepository;
+    private org.camiloleal.adapters.bd.PersonRepository personRepository;
 
     @Override
     public List<Person> findAll() {
