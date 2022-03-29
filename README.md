@@ -15,13 +15,13 @@ Estado del código
 <p dir="auto"><code>Java</code> <code>Spring-boot</code> <code>MySQL</code> <code>MongoDB</code> <code>MySQL</code> <code>Maven</code> <code>GitHub</code> <code>SonarLint</code> <code>Better Code Hub</code> <code>Swagger</code>  <code>SonarQube</code></p>
 
 
-Proyecto Microservicios y Arquitectura Limpia 
+<h3 dir="auto">Proyecto Microservicios y Arquitectura Limpia </h3>
 
 ⚙️ Instalación del proyecto
 Clonar el repositorio en tu equipo:
 <code>git clone https://github.com/camiloleal06/Person-Microservice</code>
 
-🚀Puerto Primario o Entrada. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonInterface</code>
+🚀Puerto de Entrada. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonInterface</code>
 
-🚀Puerto Secundario o Salida. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonRepository</code>
+🚀Puerto de Salida. <code>Person-Microservice/src/main/java/org/camiloleal/ports/PersonPersistence</code>
 
