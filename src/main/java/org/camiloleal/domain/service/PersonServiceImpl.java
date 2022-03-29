@@ -3,7 +3,7 @@ package org.camiloleal.domain.service;
 import lombok.AllArgsConstructor;
 import org.camiloleal.ports.in_port.PersonInterface;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.ports.out_port.PersonPersistence;
+import org.camiloleal.ports.PersonPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

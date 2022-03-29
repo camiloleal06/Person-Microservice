@@ -1,4 +1,4 @@
-package org.camiloleal.ports.out_port;
+package org.camiloleal.ports;
 
 import org.camiloleal.domain.model.Person;
 import org.springframework.stereotype.Repository;
