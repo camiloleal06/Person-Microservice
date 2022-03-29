@@ -1,4 +1,4 @@
-package org.camiloleal.adapters.bd;
+package org.camiloleal.infrastructure.bd;
 
 import lombok.*;
 import org.camiloleal.domain.model.Person;
