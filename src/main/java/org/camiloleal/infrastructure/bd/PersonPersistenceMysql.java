@@ -1,8 +1,8 @@
-package org.camiloleal.adapters.bd;
+package org.camiloleal.infrastructure.bd;
 
 import lombok.AllArgsConstructor;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.ports.PersonPersistence;
+import org.camiloleal.application.PersonPersistence;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,9 +1,8 @@
-package org.camiloleal.domain.service;
+package org.camiloleal.application;
 
 import lombok.AllArgsConstructor;
-import org.camiloleal.ports.in_port.PersonInterface;
+import org.camiloleal.domain.PersonInterface;
 import org.camiloleal.domain.model.Person;
-import org.camiloleal.ports.PersonPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

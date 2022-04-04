@@ -1,12 +1,19 @@
 package org.camiloleal.domain.service;
 
-import org.camiloleal.domain.model.Person;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import org.camiloleal.application.PersonServiceImpl;
+import org.camiloleal.domain.model.Person;
+import org.junit.jupiter.api.Test;
 
 class PersonServiceImplTest {
 
@@ -16,16 +23,8 @@ class PersonServiceImplTest {
 
     final String EMAIL = "camiloleal@gmail.com";
 
-    Person personDomain = Person.builder().
-            id(1)
-            .dni("73207639")
-            .city("Cartagena")
-            .email("camiloleal@gmail.com")
-            .firstName("camilo")
-            .lastName("Leal")
-            .age(35)
-            .phone("73207639")
-            .build();
+    Person personDomain = Person.builder().id(1).dni("73207639").city("Cartagena").email("camiloleal@gmail.com")
+            .firstName("camilo").lastName("Leal").age(35).phone("73207639").build();
     List<Person> listPerson = List.of(personDomain);
 
     @Test
@@ -57,7 +56,7 @@ class PersonServiceImplTest {
         when(personService.getPersonByEmail(EMAIL)).thenReturn(personDomain);
         assertNotEquals(null, personService.getPersonByEmail(EMAIL));
         assertEquals("73207639", personService.getPersonByEmail(EMAIL).getDni());
-              verify(personService, times(2)).getPersonByEmail(EMAIL);
+        verify(personService, times(2)).getPersonByEmail(EMAIL);
     }
 
 }
