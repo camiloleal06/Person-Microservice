@@ -1,0 +1,14 @@
+server:
+  port: 8000
+spring:
+  datasource:
+    password: C4m1l02022+-+
+    url: jdbc:mysql://1213f2f.online-server.cloud/pragma?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: camilo.leal
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
